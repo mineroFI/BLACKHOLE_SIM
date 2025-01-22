@@ -1,0 +1,2 @@
+# Ignorar carpetas de caché y compilación
+__pycache__/
