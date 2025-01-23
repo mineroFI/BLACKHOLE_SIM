@@ -1,7 +1,7 @@
 import pygame
 from config import WIDTH, HEIGHT, BLACK, RED, G, BLACK_HOLE_MASS
 from objects import SpaceObject
-from physics import *
+# from physics import *
 import random
 import math
 from controls import handle_user_input
