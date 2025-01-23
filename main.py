@@ -66,7 +66,7 @@ def main():
     black_hole_pos = (WIDTH // 2, HEIGHT // 2)
     black_hole_radius = 20
     event_horizon_radius = black_hole_radius * 5  # El horizonte de sucesos es 5 veces el radio del agujero negro
-    rotation_angle = 0
+    # rotation_angle = 0
 
     # Lista de objetos iniciales
     objects = [SpaceObject(random.randint(0, WIDTH), random.randint(0, HEIGHT)) for _ in range(10)]
@@ -97,9 +97,9 @@ def main():
         
         black_hole_image = pygame.Surface((black_hole_radius * 2, black_hole_radius * 2), pygame.SRCALPHA)
         pygame.draw.circle(black_hole_image, RED, (black_hole_radius, black_hole_radius), black_hole_radius)
-        rotated_black_hole = pygame.transform.rotate(black_hole_image, rotation_angle)
-        rotated_rect = rotated_black_hole.get_rect(center=black_hole_pos)
-        screen.blit(rotated_black_hole, rotated_rect)
+        # rotated_black_hole = pygame.transform.rotate(black_hole_image, rotation_angle)
+        # rotated_rect = rotated_black_hole.get_rect(center=black_hole_pos)
+        screen.blit(black_hole_image, black_hole_image.get_rect(center=black_hole_pos))
 
         # Dibujar el horizonte de sucesos
         pygame.draw.circle(screen, (100, 100, 255), black_hole_pos, event_horizon_radius, 2)
